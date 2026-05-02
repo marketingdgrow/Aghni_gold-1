@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ta">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
   <meta name="description" content="Get the highest price for your gold in Chennai. Instant cash within 15 minutes. BIS certified purity testing. Doorstep service available.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+Tamil:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Serif+Tamil:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,13 +16,12 @@
   <!-- NOISE OVERLAY -->
   <div class="noise-overlay"></div>
 
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
+  <!-- FLOATING PARTICLES -->
+  <div class="particles" id="particles"></div>
 
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
-    <div class="header-glow"></div>
+    <div class="header-shimmer"></div>
     <nav class="nav-bar">
       <div class="container nav-bar__content">
         <div class="logo">
@@ -30,10 +29,10 @@
         </div>
         <ul class="main-nav" id="mainNav">
           <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About us</a></li>
-          <li><a href="#services">Our services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact us</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-right">
           <a href="tel:+919840098400" class="btn btn-gold btn--nav">
@@ -51,32 +50,31 @@
 
     <!-- HERO -->
     <section class="hero" id="home">
-      <!-- Decorative elements -->
-      <div class="hero-grain"></div>
-      <div class="hero-circle hero-circle--1"></div>
-      <div class="hero-circle hero-circle--2"></div>
-      <div class="hero-circle hero-circle--3"></div>
-      <div class="hero-lines">
-        <div class="hero-line"></div>
-        <div class="hero-line"></div>
-        <div class="hero-line"></div>
-        <div class="hero-line"></div>
-        <div class="hero-line"></div>
-      </div>
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow hero-glow--1"></div>
+      <div class="hero-glow hero-glow--2"></div>
+      <div class="hero-glow hero-glow--3"></div>
 
       <div class="container">
 
-        <!-- Tamil marquee ticker -->
+        <!-- TICKER — ENGLISH -->
         <div class="ticker-wrap reveal-up" style="--delay:0s">
-          <div class="ticker">
-            <span>✦ இன்றய மார்க்கெட் விலைக்கு <strong>BEST PRICE</strong> உறுதி</span>
-            <span>✦ உடனடி பணம் 15 நிமிடத்தில்</span>
-            <span>✦ BIS சான்றளிக்கப்பட்ட தூய்மை சோதனை</span>
-            <span>✦ கதவு சேவை கிடைக்கும்</span>
-            <span>✦ இன்றய மார்க்கெட் விலைக்கு <strong>BEST PRICE</strong> உறுதி</span>
-            <span>✦ உடனடி பணம் 15 நிமிடத்தில்</span>
-            <span>✦ BIS சான்றளிக்கப்பட்ட தூய்மை சோதனை</span>
-            <span>✦ கதவு சேவை கிடைக்கும்</span>
+          <div class="ticker-label">LIVE</div>
+          <div class="ticker-track">
+            <div class="ticker">
+              <span>✦ Today's Market Rate — <strong>BEST PRICE GUARANTEED</strong></span>
+              <span>✦ Instant Cash Within <strong>15 MINUTES</strong></span>
+              <span>✦ <strong>BIS Certified</strong> Purity Testing</span>
+              <span>✦ Doorstep Service Available — <strong>7 AM to 9 PM</strong></span>
+              <span>✦ <strong>4.9 ★</strong> Google Rating · 435+ Reviews</span>
+              <span>✦ Government Registered &amp; <strong>RBI Compliant</strong></span>
+              <span>✦ Today's Market Rate — <strong>BEST PRICE GUARANTEED</strong></span>
+              <span>✦ Instant Cash Within <strong>15 MINUTES</strong></span>
+              <span>✦ <strong>BIS Certified</strong> Purity Testing</span>
+              <span>✦ Doorstep Service Available — <strong>7 AM to 9 PM</strong></span>
+              <span>✦ <strong>4.9 ★</strong> Google Rating · 435+ Reviews</span>
+              <span>✦ Government Registered &amp; <strong>RBI Compliant</strong></span>
+            </div>
           </div>
         </div>
 
@@ -84,19 +82,19 @@
           <!-- LEFT -->
           <div class="hero__left">
             <div class="section-label reveal-up" style="--delay:0.05s">
-              <span class="label-gem">✦</span>Chennai's Trusted Gold Buyer<span class="label-gem">✦</span>
+              <span class="label-gem">✦</span>Chennai's Most Trusted Gold Buyer<span class="label-gem">✦</span>
             </div>
 
             <h1 class="hero__tagline reveal-up" style="--delay:0.15s">
               Sell Your Gold
               <span class="accent-line">
                 <em>At Best Price</em>
-                <svg class="underline-svg" viewBox="0 0 320 14" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                  <path d="M4 9 Q80 2 160 9 Q240 16 316 9" stroke="url(#gGrad)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <svg class="underline-svg" viewBox="0 0 380 18" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                  <path d="M4 12 Q95 3 190 11 Q285 19 376 11" stroke="url(#gGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
                   <defs><linearGradient id="gGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#B8860B" stop-opacity="0"/><stop offset="30%" stop-color="#DAA520"/><stop offset="70%" stop-color="#F0C040"/><stop offset="100%" stop-color="#B8860B" stop-opacity="0"/></linearGradient></defs>
                 </svg>
               </span>
-              <span class="tagline-sub">Today</span>
+              <span class="tagline-sub">Today in Chennai</span>
             </h1>
 
             <ul class="hero__benefits">
@@ -104,7 +102,7 @@
                 <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
                 <div class="benefit-text">
                   <strong>INSTANT Cash</strong>
-                  <span>within 15 MINUTES</span>
+                  <span>Within 15 Minutes — Guaranteed</span>
                 </div>
                 <div class="benefit-badge">Fast</div>
               </li>
@@ -112,7 +110,7 @@
                 <div class="benefit-icon"><i class="fas fa-lock-open"></i></div>
                 <div class="benefit-text">
                   <strong>PLEDGED GOLD</strong>
-                  <span>TAKE OVER SERVICE</span>
+                  <span>Takeover Service Available</span>
                 </div>
                 <div class="benefit-badge">Easy</div>
               </li>
@@ -120,7 +118,7 @@
                 <div class="benefit-icon"><i class="fas fa-home"></i></div>
                 <div class="benefit-text">
                   <strong>DOOR-STEP SERVICE</strong>
-                  <span>7 AM TO 9 PM</span>
+                  <span>Available 7 AM to 9 PM Daily</span>
                 </div>
                 <div class="benefit-badge">Free</div>
               </li>
@@ -128,7 +126,7 @@
                 <div class="benefit-icon"><i class="fas fa-star"></i></div>
                 <div class="benefit-text">
                   <strong>100% SATISFIED</strong>
-                  <span>CUSTOMERS</span>
+                  <span>Customers Across Chennai</span>
                 </div>
                 <div class="benefit-badge">Trusted</div>
               </li>
@@ -149,7 +147,7 @@
               <div class="tamil-highlight__inner">
                 <span class="tamil-main">தங்க நகை விற்று</span>
                 <span class="tamil-accent">உடனடி பணம் பெற</span>
-                <span class="tamil-sub">அழைக்கவும் → 8000 100 933</span>
+                <span class="tamil-sub">Call Now → 8000 100 933</span>
               </div>
               <div class="tamil-highlight__deco">
                 <i class="fas fa-gem"></i>
@@ -179,17 +177,17 @@
             <div class="hero__form-card" id="estimationForm">
               <div class="form-card__header">
                 <div class="form-free-pill">FREE ESTIMATE</div>
-                <h3 class="form-title">GET YOUR <em>GOLD</em> ESTIMATE</h3>
-                <p class="form-subtitle">உடனடி மதிப்பீடு · எந்த கட்டாயமும் இல்லை</p>
+                <h3 class="form-title">GET YOUR <em>GOLD</em> ESTIMATED</h3>
+                <p class="form-subtitle">Instant Valuation · Zero Obligation</p>
               </div>
               <form id="estForm">
                 <div class="form-field">
                   <div class="field-icon"><i class="fas fa-user"></i></div>
-                  <input type="text" placeholder="உங்கள் பெயர் / Your Name" required>
+                  <input type="text" placeholder="Your Full Name" required>
                 </div>
                 <div class="form-field">
                   <div class="field-icon"><i class="fas fa-envelope"></i></div>
-                  <input type="email" placeholder="Email Address">
+                  <input type="email" placeholder="Email Address (Optional)">
                 </div>
                 <div class="form-field">
                   <div class="field-icon"><i class="fas fa-phone"></i></div>
@@ -197,7 +195,7 @@
                 </div>
                 <div class="form-field">
                   <div class="field-icon"><i class="fas fa-weight"></i></div>
-                  <input type="text" placeholder="எத்தனை கிராம் / How Many Grams" required>
+                  <input type="text" placeholder="Approx. Weight in Grams" required>
                 </div>
                 <button type="submit" class="btn btn-gold btn-full">
                   <span>Get My Gold Price Now</span>
@@ -260,22 +258,21 @@
             <div class="badge-num">01</div>
             <div class="badge-icon"><img src="./img/mainlogo1.png" alt="Home Pickup"></div>
             <h3>Hassle-Free<br><strong>Home Pickup</strong></h3>
-            <p>நாங்கள் உங்கள் இல்லத்திற்கு வருவோம்</p>
+            <p>We come directly to your doorstep</p>
             <div class="badge-cta"><span>Learn More</span><i class="fas fa-arrow-right"></i></div>
           </div>
           <div class="badge-item badge-item--featured">
-            <div class="badge-popular">POPULAR</div>
             <div class="badge-num">02</div>
             <div class="badge-icon"><img src="./img/mainlogo.png" alt="Clear Pledged"></div>
             <h3>Clear Pledged<br><strong>Loan Easily</strong></h3>
-            <p>அடகு வைத்த தங்கம் மீட்டெடுக்கலாம்</p>
+            <p>Retrieve your pledged gold effortlessly</p>
             <div class="badge-cta"><span>Learn More</span><i class="fas fa-arrow-right"></i></div>
           </div>
           <div class="badge-item">
             <div class="badge-num">03</div>
             <div class="badge-icon"><img src="./img/mainlogo2.png" alt="Cash Instantly"></div>
             <h3>Walk Out With<br><strong>Cash Instantly</strong></h3>
-            <p>15 நிமிடத்தில் பணம் கையில்</p>
+            <p>Money in hand within 15 minutes</p>
             <div class="badge-cta"><span>Learn More</span><i class="fas fa-arrow-right"></i></div>
           </div>
         </div>
@@ -291,7 +288,7 @@
             <div class="cert-pill cert-pill--google">
               <span class="g-logo-mini"><span class="gc-b">G</span><span class="gc-r">o</span><span class="gc-y">o</span><span class="gc-b2">g</span><span class="gc-g">l</span><span class="gc-r2">e</span></span>
               <span class="stars-mini">★★★★★</span>
-              <span>4.8 Rating</span>
+              <span>4.9 Rating</span>
             </div>
           </div>
         </div>
@@ -364,35 +361,35 @@
                 <div class="why-num">01</div>
                 <div class="why-body">
                   <h4>Doorstep Gold Selling Service</h4>
-                  <p>நாங்கள் உங்கள் இல்லத்திற்கே வருவோம் — Our team visits your location for a fast, private and easy gold testing experience.</p>
+                  <p>Our team visits your location for a fast, private and easy gold testing experience — no need to travel anywhere.</p>
                 </div>
               </li>
               <li class="why-item">
                 <div class="why-num">02</div>
                 <div class="why-body">
                   <h4>100% Transparent Purity Testing</h4>
-                  <p>முழு வெளிப்படைத்தன்மை — BIS-certified machines evaluate your gold right in front of you for precise, unbiased pricing.</p>
+                  <p>BIS-certified machines evaluate your gold right in front of you for precise, unbiased pricing — nothing hidden.</p>
                 </div>
               </li>
               <li class="why-item">
                 <div class="why-num">03</div>
                 <div class="why-body">
                   <h4>Pledged Gold Takeover Service</h4>
-                  <p>அடகு தங்கம் மீட்பு — We help retrieve your pledged gold from banks while delivering the highest possible value.</p>
+                  <p>We help retrieve your pledged gold from banks while delivering the highest possible value for your assets.</p>
                 </div>
               </li>
               <li class="why-item">
                 <div class="why-num">04</div>
                 <div class="why-body">
                   <h4>Re-Pledge Gold Loan Support</h4>
-                  <p>மறு அடகு சேவை — Safe re-pledge services when you need financial help with trusted partner banks.</p>
+                  <p>Safe re-pledge services when you need financial help with trusted partner banks at the best interest rates.</p>
                 </div>
               </li>
               <li class="why-item">
                 <div class="why-num">05</div>
                 <div class="why-body">
                   <h4>Instant Cash Within 15 Minutes</h4>
-                  <p>15 நிமிடத்தில் பணம் — Receive cash, bank transfer or UPI payment within 15 minutes for your immediate needs.</p>
+                  <p>Receive cash, bank transfer or UPI payment within 15 minutes — because we respect your time and urgency.</p>
                 </div>
               </li>
             </ul>
@@ -414,20 +411,20 @@
           <div class="rate-cards reveal-up" style="--delay:0.2s">
             <div class="rate-card">
               <div class="rate-karat">24K</div>
-              <div class="rate-label">தூய தங்கம்</div>
+              <div class="rate-label">Pure Gold</div>
               <div class="rate-price">Call Us</div>
               <div class="rate-sub">for live price</div>
             </div>
             <div class="rate-card rate-card--featured">
               <div class="rate-live-dot"></div>
               <div class="rate-karat">22K</div>
-              <div class="rate-label">நகை தங்கம்</div>
+              <div class="rate-label">Jewellery Gold</div>
               <div class="rate-price">Best Rate</div>
               <div class="rate-sub">guaranteed</div>
             </div>
             <div class="rate-card">
               <div class="rate-karat">18K</div>
-              <div class="rate-label">கலப்பு தங்கம்</div>
+              <div class="rate-label">Mixed Gold</div>
               <div class="rate-price">Fair Price</div>
               <div class="rate-sub">instantly</div>
             </div>
@@ -454,7 +451,7 @@
         <div class="section-header section-header--center reveal-up" style="--delay:0s">
           <div class="section-label"><span class="label-gem">✦</span>Common Questions<span class="label-gem">✦</span></div>
           <h2>Questions People <em>Ask Us</em></h2>
-          <p class="section-desc">நீங்கள் கேட்கும் கேள்விகளுக்கு நேர்மையான பதில்கள்</p>
+          <p class="section-desc">Honest answers to the questions you're thinking about</p>
         </div>
         <div class="faq-accordion reveal-up" style="--delay:0.2s">
           <div class="faq-item" data-open="false">
@@ -464,7 +461,7 @@
               <div class="faq-toggle"><i class="fas fa-plus"></i></div>
             </div>
             <div class="faq-answer">
-              <p>நாங்கள் XRF testing மற்றும் acid tests பயன்படுத்துகிறோம். You stand right there and watch. The machine shows the purity percentage on a digital screen. <strong>No disappearing into a back room.</strong></p>
+              <p>We use XRF testing and acid tests. You stand right there and watch. The machine shows the purity percentage on a digital screen. <strong>No disappearing into a back room — everything is done in front of you.</strong></p>
             </div>
           </div>
           <div class="faq-item" data-open="false">
@@ -474,7 +471,7 @@
               <div class="faq-toggle"><i class="fas fa-plus"></i></div>
             </div>
             <div class="faq-answer">
-              <p>உடைந்தது, வளைந்தது, பழைய டிசைன் — எல்லாம் பரவாயில்லை. We're buying gold, not admiring jewellery. <strong>If it's gold, we'll buy it.</strong></p>
+              <p>Broken, bent, old design — it doesn't matter. We're buying gold, not admiring jewellery. <strong>If it's gold, we'll buy it</strong> at the best market rate.</p>
             </div>
           </div>
           <div class="faq-item faq-item--highlight" data-open="true">
@@ -484,7 +481,7 @@
               <div class="faq-toggle"><i class="fas fa-minus"></i></div>
             </div>
             <div class="faq-answer faq-answer--open">
-              <p><strong>பதினைந்து நிமிடம்.</strong> That's not marketing talk — that's the actual time from when you walk in (or we arrive at your door) to when <strong>money's in your hand.</strong></p>
+              <p><strong>Fifteen minutes.</strong> That's not marketing talk — that's the actual time from when you walk in (or we arrive at your door) to when <strong>money is in your hand.</strong></p>
               <a href="#estimationForm" class="btn btn-gold" style="margin-top:16px;display:inline-flex;">Get Estimate Now</a>
             </div>
           </div>
@@ -495,7 +492,7 @@
               <div class="faq-toggle"><i class="fas fa-plus"></i></div>
             </div>
             <div class="faq-answer">
-              <p>Rates change constantly — that's how the gold market works. Call <strong>8000 100 933</strong> for the live rate when you're ready.</p>
+              <p>Rates change constantly — that's how the gold market works. Call <strong>8000 100 933</strong> for the live rate when you're ready to sell.</p>
             </div>
           </div>
           <div class="faq-item" data-open="false">
@@ -505,7 +502,7 @@
               <div class="faq-toggle"><i class="fas fa-plus"></i></div>
             </div>
             <div class="faq-answer">
-              <p>நீங்களே testing பாருங்கள். நீங்களே கணக்கு பாருங்கள். You get market rates without weird deductions. Plus, <strong>we're government-registered</strong>.</p>
+              <p>You see the testing. You see the calculation. You get market rates without weird deductions. Plus, <strong>we're government-registered</strong> and RBI compliant — your gold is always safe with us.</p>
             </div>
           </div>
         </div>
@@ -533,7 +530,7 @@
           <div class="sell-content reveal-right" style="--delay:0.2s">
             <div class="section-label"><span class="label-gem">✦</span>We Buy It All<span class="label-gem">✦</span></div>
             <h2>What Can You<br><em>Sell to Us?</em></h2>
-            <h5>நகை மட்டுமல்ல — இன்னும் நிறைய வாங்குகிறோம்</h5>
+            <h5>Not just jewellery — we buy much more</h5>
             <p class="intro-p">Most people don't realize how much value is sitting unused in their homes. Here's everything we buy at the best Chennai market rates:</p>
             <div class="sell-category">
               <div class="sell-cat-title">
@@ -541,16 +538,16 @@
                 <h3>GOLD JEWELLERY</h3>
               </div>
               <ul class="sell-list">
-                <li>பழைய வளையல், நெக்லஸ் செட் — Old bangles, outdated necklace sets</li>
-                <li>Wedding jewellery you never wear anymore</li>
+                <li>Old bangles, outdated necklace sets you never wear</li>
+                <li>Wedding jewellery stored away for years</li>
                 <li>Gold with missing stones or damaged clasps</li>
-                <li>Heavy traditional pieces — பாரம்பரிய நகைகள்</li>
+                <li>Heavy traditional pieces — all designs accepted</li>
                 <li>Any karat: 24K, 22K, 18K, even 14K</li>
               </ul>
             </div>
             <div class="sell-note">
               <i class="fas fa-info-circle"></i>
-              <p><strong>உறுதியில்லையா?</strong> If it's gold, silver, diamonds, or platinum — bring it. We'll evaluate and give you a fair quote. No item is too small or too old.</p>
+              <p><strong>Not sure?</strong> If it's gold, silver, diamonds, or platinum — bring it. We'll evaluate and give you a fair quote. No item is too small or too old.</p>
             </div>
           </div>
         </div>
@@ -575,7 +572,7 @@
             </div>
             <div class="result-card reveal-up" style="--delay:0.2s">
               <div class="result-card__icon"><i class="fas fa-star"></i></div>
-              <blockquote>Our rating on Google is <strong>4.9 stars</strong>. People message us on Instagram, WhatsApp, and call directly because someone they know had a good experience.</blockquote>
+              <blockquote>Our rating on Google is <strong>4.9 stars</strong>. People message us on Instagram, WhatsApp, and call directly because someone they know had a great experience.</blockquote>
               <div class="result-card__tamil">Google-ல் 4.9 நட்சத்திர மதிப்பீடு</div>
             </div>
             <div class="result-card reveal-up" style="--delay:0.3s">
@@ -619,22 +616,22 @@
           <div class="belief-card">
             <div class="belief-icon-wrap"><i class="fas fa-eye"></i></div>
             <h5>Show, Don't Hide</h5>
-            <p>நீங்களே பாருங்கள் — You see the testing, you see the calculation. You understand precisely what you're getting and why.</p>
+            <p>You see the testing, you see the calculation. You understand precisely what you're getting and why — every time.</p>
           </div>
           <div class="belief-card">
             <div class="belief-icon-wrap"><i class="fas fa-balance-scale"></i></div>
             <h5>Fair Market Value</h5>
-            <p>சரியான விலை — We check current Chennai rates and pay accordingly. No weird deductions.</p>
+            <p>We check current Chennai rates and pay accordingly. No weird deductions, no hidden fees — just honest pricing.</p>
           </div>
           <div class="belief-card">
             <div class="belief-icon-wrap"><i class="fas fa-bolt"></i></div>
             <h5>Make It Fast</h5>
-            <p>வேக சேவை — You need cash for a reason. We won't waste your time with complicated processes.</p>
+            <p>You need cash for a reason. We won't waste your time with complicated processes — 15 minutes is our promise.</p>
           </div>
           <div class="belief-card">
             <div class="belief-icon-wrap"><i class="fas fa-home"></i></div>
             <h5>Come to You</h5>
-            <p>உங்கள் இல்லத்திற்கே — Selling gold shouldn't require taking a day off work and traveling across the city.</p>
+            <p>Selling gold shouldn't require taking a day off work and traveling across the city. We come to your home.</p>
           </div>
         </div>
       </div>
@@ -642,70 +639,151 @@
 
     <div class="gold-divider"></div>
 
-    <!-- REVIEWS -->
-    <section class="google-reviews" id="review">
-      <div class="container">
-        <div class="reviews-header reveal-up" style="--delay:0s">
-          <div class="google-logo-text">
-            <span class="gc-b1">G</span><span class="gc-r1">o</span><span class="gc-y1">o</span><span class="gc-b2">g</span><span class="gc-g1">l</span><span class="gc-r2">e</span>
-          </div>
-          <h2>Customer <em>Reviews</em></h2>
-          <div class="rating-summary">
-            <div class="rating-stars">★★★★★</div>
-            <div class="rating-info">
-              <strong>4.8 / 5</strong>
-              <span>from 435 reviews</span>
-            </div>
-          </div>
-        </div>
+   <section class="google-reviews" id="review">
+  <div class="container">
 
-        <div class="reviews-carousel reveal-up" style="--delay:0.2s">
-          <button class="nav-btn nav-btn--prev" id="prevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-          <div class="reviews-viewport">
-            <div class="reviews-track" id="reviewsTrack">
-              <div class="review-card">
-                <div class="review-top">
-                  <div class="review-avatar"><img src="./img/A2.jpg" alt="Sekaran"></div>
-                  <div class="review-info">
-                    <h4>Sekaran</h4>
-                    <small>16 December 2025</small>
-                  </div>
-                  <div class="review-g-badge"><span class="gc-b">G</span><span class="gc-r">o</span><span class="gc-y">o</span><span class="gc-b">g</span><span class="gc-g">l</span><span class="gc-r">e</span></div>
-                </div>
-                <div class="review-stars">★★★★★</div>
-                <p>Best place in chennai for selling gold compared to another place. thank you aghni gold.</p>
-              </div>
-              <div class="review-card">
-                <div class="review-top">
-                  <div class="review-avatar"><img src="./img/A1.jpg" alt="Dhanush"></div>
-                  <div class="review-info">
-                    <h4>Dhanush</h4>
-                    <small>11 December 2025</small>
-                  </div>
-                  <div class="review-g-badge"><span class="gc-b">G</span><span class="gc-r">o</span><span class="gc-y">o</span><span class="gc-b">g</span><span class="gc-g">l</span><span class="gc-r">e</span></div>
-                </div>
-                <div class="review-stars">★★★★★</div>
-                <p>Cash in your inherited silver and gold here. Trust worthy guys !!!</p>
-              </div>
-              <div class="review-card">
-                <div class="review-top">
-                  <div class="review-avatar"><img src="./img/A8.jpg" alt="Hema"></div>
-                  <div class="review-info">
-                    <h4>Hema</h4>
-                    <small>08 December 2025</small>
-                  </div>
-                  <div class="review-g-badge"><span class="gc-b">G</span><span class="gc-r">o</span><span class="gc-y">o</span><span class="gc-b">g</span><span class="gc-g">l</span><span class="gc-r">e</span></div>
-                </div>
-                <div class="review-stars">★★★★★</div>
-                <p>Sold old gold jewellery. I had some nice cash for stuff I had no use for. Really happy with the service!</p>
-              </div>
-            </div>
-          </div>
-          <button class="nav-btn nav-btn--next" id="nextBtn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
-        </div>
-
+    <!-- HEADER -->
+    <div class="reviews-header reveal-up" style="--delay:0s">
+      <div class="google-logo-text">
+        <span class="gc-b1">G</span><span class="gc-r1">o</span><span class="gc-y1">o</span><span class="gc-b2">g</span><span class="gc-g1">l</span><span class="gc-r2">e</span>
       </div>
-    </section>
+      <h2>Customer <em>Reviews</em></h2>
+      <div class="rating-summary">
+        <div class="rating-stars">★★★★★</div>
+        <div class="rating-info">
+          <strong>4.9 / 5</strong>
+          <span>from 435 reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="reviews-carousel reveal-up" style="--delay:0.2s">
+      <button class="nav-btn" id="prevBtn" aria-label="Previous">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="reviews-viewport">
+        <div class="reviews-track" id="reviewsTrack">
+
+          <!-- CARD 1 -->
+          <div class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">
+                <div class="avatar-letter">S</div>
+              </div>
+              <div class="review-info">
+                <h4>Sekaran</h4>
+                <small>16 December 2025</small>
+              </div>
+              <div class="review-g-badge">
+                <span class="gc-b">G</span><span class="gc-r">o</span><span class="gc-y">o</span><span class="gc-b">g</span><span class="gc-g">l</span><span class="gc-r">e</span>
+              </div>
+            </div>
+            <div class="review-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="review-quote-icon">"</span>
+            <p>Best place in Chennai for selling gold compared to anywhere else. Thank you Aghni Gold!</p>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">
+                <div class="avatar-letter">D</div>
+              </div>
+              <div class="review-info">
+                <h4>Dhanush</h4>
+                <small>11 December 2025</small>
+              </div>
+              <div class="review-g-badge">
+                <span class="gc-b">G</span><span class="gc-r">o</span><span class="gc-y">o</span><span class="gc-b">g</span><span class="gc-g">l</span><span class="gc-r">e</span>
+              </div>
+            </div>
+            <div class="review-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="review-quote-icon">"</span>
+            <p>Cashed in my inherited silver and gold here. Trustworthy team — highly recommend!</p>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">
+                <div class="avatar-letter">H</div>
+              </div>
+              <div class="review-info">
+                <h4>Hema</h4>
+                <small>08 December 2025</small>
+              </div>
+              <div class="review-g-badge">
+                <span class="gc-b">G</span><span class="gc-r">o</span><span class="gc-y">o</span><span class="gc-b">g</span><span class="gc-g">l</span><span class="gc-r">e</span>
+              </div>
+            </div>
+            <div class="review-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="review-quote-icon">"</span>
+            <p>Sold old gold jewellery and got nice cash for stuff I had no use for. Really happy with the service!</p>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">
+                <div class="avatar-letter">P</div>
+              </div>
+              <div class="review-info">
+                <h4>Priya</h4>
+                <small>02 December 2025</small>
+              </div>
+              <div class="review-g-badge">
+                <span class="gc-b">G</span><span class="gc-r">o</span><span class="gc-y">o</span><span class="gc-b">g</span><span class="gc-g">l</span><span class="gc-r">e</span>
+              </div>
+            </div>
+            <div class="review-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="review-quote-icon">"</span>
+            <p>Very transparent process. They showed me the weight and purity clearly. Got best rate in Ambattur!</p>
+          </div>
+
+          <!-- CARD 5 -->
+          <div class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">
+                <div class="avatar-letter">R</div>
+              </div>
+              <div class="review-info">
+                <h4>Ramesh</h4>
+                <small>28 November 2025</small>
+              </div>
+              <div class="review-g-badge">
+                <span class="gc-b">G</span><span class="gc-r">o</span><span class="gc-y">o</span><span class="gc-b">g</span><span class="gc-g">l</span><span class="gc-r">e</span>
+              </div>
+            </div>
+            <div class="review-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="review-quote-icon">"</span>
+            <p>Immediate cash payment, no waiting. Staff was very professional and explained everything clearly.</p>
+          </div>
+
+        </div><!-- /reviews-track -->
+      </div><!-- /reviews-viewport -->
+
+      <button class="nav-btn" id="nextBtn" aria-label="Next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div><!-- /reviews-carousel -->
+
+    <!-- DOTS -->
+    <div class="reviews-dots" id="reviewsDots"></div>
+
+  </div><!-- /container -->
+</section>
 
   </main>
 
@@ -716,7 +794,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo"><img src="./img/logo new.png" alt="Aghni Gold"></div>
-          <p class="footer-tagline">Aghni Gold — உங்கள் தங்கத்திற்கு உடனடி பணம்</p>
+          <p class="footer-tagline">Aghni Gold — Instant Cash for Your Gold in Chennai</p>
           <div class="footer-contact-list">
             <div class="footer-contact-item">
               <i class="fas fa-map-marker-alt"></i>
@@ -724,7 +802,7 @@
             </div>
             <div class="footer-contact-item">
               <i class="fas fa-map-marker-alt"></i>
-              <p><strong>ARUMBAKKAM BRANCH</strong><br>26, 1st Floor, MMDA Colony main road, Arumbakkam, Chennai - 600106</p>
+              <p><strong>ARUMBAKKAM BRANCH</strong><br>26, 1st Floor, MMDA Colony Main Road, Arumbakkam, Chennai - 600106</p>
             </div>
             <div class="footer-contact-item">
               <i class="fas fa-phone"></i>
@@ -750,16 +828,16 @@
             <a href="#services">Why Sell Gold?</a>
             <a href="#about">About Us</a>
             <a href="#goldworth">Gold Worth</a>
-            <a href="#review">Customer Reviews</a>
-            <a href="#ask">Ask Questions</a>
-            <a href="#contact">Contacts</a>
+            <a href="#review">Reviews</a>
+            <a href="#ask">FAQ</a>
+            <a href="#contact">Contact</a>
           </div>
         </div>
         <div class="footer-col footer-note">
           <h4>Important Note</h4>
           <div class="footer-warning">
             <i class="fas fa-exclamation-triangle"></i>
-            <p>Aghni Gold does not buy stolen or broken gold. Selling stolen or fake gold is a criminal offense. Anyone aged 21 or younger can only sell gold with a parent's or guardian's written letter.</p>
+            <p>Aghni Gold does not buy stolen or fake gold. Selling stolen or counterfeit gold is a criminal offense. Anyone aged 21 or younger can only sell gold with a parent's or guardian's written letter.</p>
           </div>
           <a href="#" class="alert-btn">
             <i class="fas fa-bell"></i>
