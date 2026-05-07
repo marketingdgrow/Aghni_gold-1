@@ -182,45 +182,114 @@
   });
 
   /* ============================================
-     REVIEWS CAROUSEL
-  ============================================ */
-  const track   = document.getElementById('reviewsTrack');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  if (track) {
-    const cards = track.querySelectorAll('.review-card');
-    let current = 0;
-    function getPerView() {
-      if (window.innerWidth <= 768) return 1;
-      if (window.innerWidth <= 1024) return 2;
-      return 3;
-    }
-    function updateSlider() {
-      const pv = getPerView();
-      const maxIdx = Math.max(0, cards.length - pv);
-      current = Math.min(current, maxIdx);
-      const cardWidth = cards[0].getBoundingClientRect().width;
-      const gap = 20;
-      track.style.transform = `translateX(-${current * (cardWidth + gap)}px)`;
-      if (prevBtn) { prevBtn.style.opacity = current === 0 ? '0.4' : '1'; prevBtn.disabled = current === 0; }
-      if (nextBtn) { nextBtn.style.opacity = current >= maxIdx ? '0.4' : '1'; nextBtn.disabled = current >= maxIdx; }
-    }
-    if (prevBtn) prevBtn.addEventListener('click', () => { if (current > 0) { current--; updateSlider(); } });
-    if (nextBtn) nextBtn.addEventListener('click', () => { const maxIdx = cards.length - getPerView(); if (current < maxIdx) { current++; updateSlider(); } });
-    let touchStartX = 0;
-    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    track.addEventListener('touchend', e => {
-      const dx = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(dx) > 50) {
-        const maxIdx = cards.length - getPerView();
-        if (dx > 0 && current < maxIdx) { current++; updateSlider(); }
-        else if (dx < 0 && current > 0) { current--; updateSlider(); }
-      }
-    }, { passive: true });
-    window.addEventListener('resize', updateSlider, { passive: true });
-    updateSlider();
+   REVIEWS CAROUSEL v3 — WORKING
+============================================ */
+(function () {
+  'use strict';
+
+  const slider   = document.getElementById('reviewsSlider');
+  const dotsWrap = document.getElementById('rDots');
+  const prevBtn  = document.getElementById('rPrev');
+  const nextBtn  = document.getElementById('rNext');
+  if (!slider) return;
+
+  const cards = Array.from(slider.querySelectorAll('.rcard'));
+  let current = 0;
+  let autoTimer = null;
+
+  function getPerView() {
+    const w = window.innerWidth;
+    if (w <= 768) return 1;
+    if (w <= 1024) return 2;
+    return 3;
   }
 
+  function maxIdx() {
+    return Math.max(0, cards.length - getPerView());
+  }
+
+  /* Animate cards into view */
+  function revealCards() {
+    const pv = getPerView();
+    cards.forEach((c, i) => {
+      c.classList.remove('rcard--visible');
+      if (i >= current && i < current + pv) {
+        setTimeout(() => c.classList.add('rcard--visible'), (i - current) * 80);
+      }
+    });
+  }
+
+  /* Build dot buttons */
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    const total = maxIdx() + 1;
+    for (let i = 0; i < total; i++) {
+      const d = document.createElement('button');
+      d.className = 'rdot' + (i === current ? ' active' : '');
+      d.setAttribute('aria-label', 'Slide ' + (i + 1));
+      d.addEventListener('click', () => { current = i; update(); });
+      dotsWrap.appendChild(d);
+    }
+  }
+
+  function syncDots() {
+    dotsWrap.querySelectorAll('.rdot').forEach((d, i) =>
+      d.classList.toggle('active', i === current)
+    );
+  }
+
+  function update() {
+    current = Math.max(0, Math.min(current, maxIdx()));
+    const cardW = cards[0].getBoundingClientRect().width;
+    const gap   = 22;
+    slider.style.transform = `translateX(-${current * (cardW + gap)}px)`;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current >= maxIdx();
+    prevBtn.style.opacity = current === 0 ? '0.32' : '1';
+    nextBtn.style.opacity = current >= maxIdx() ? '0.32' : '1';
+    syncDots();
+    revealCards();
+  }
+
+  prevBtn.addEventListener('click', () => { if (current > 0) { current--; update(); } });
+  nextBtn.addEventListener('click', () => { if (current < maxIdx()) { current++; update(); } });
+
+  /* Touch swipe */
+  let tx = 0;
+  slider.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+  slider.addEventListener('touchend', e => {
+    const dx = tx - e.changedTouches[0].clientX;
+    if (Math.abs(dx) > 50) {
+      if (dx > 0 && current < maxIdx()) { current++; update(); }
+      else if (dx < 0 && current > 0) { current--; update(); }
+    }
+  }, { passive: true });
+
+  /* Auto-play */
+  function startAuto() {
+    autoTimer = setInterval(() => {
+      current = current < maxIdx() ? current + 1 : 0;
+      update();
+    }, 5000);
+  }
+  function stopAuto() { clearInterval(autoTimer); }
+
+  slider.addEventListener('mouseenter', stopAuto);
+  slider.addEventListener('mouseleave', startAuto);
+
+  /* Resize */
+  let rt;
+  window.addEventListener('resize', () => {
+    clearTimeout(rt);
+    rt = setTimeout(() => { buildDots(); update(); }, 150);
+  }, { passive: true });
+
+  /* Init */
+  buildDots();
+  update();
+  startAuto();
+  setTimeout(revealCards, 300);
+})();
   /* ============================================
      ACTIVE NAV ON SCROLL
   ============================================ */
