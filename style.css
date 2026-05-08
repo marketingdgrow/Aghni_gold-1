@@ -1055,10 +1055,9 @@ ul {
 .center-hero-img {
   width: 100%;
   max-width: 300px;
-  height: 430px;
+  height: 780px;
   object-fit: contain;
   object-position: center bottom;
-  animation: floatY 5.5s ease-in-out infinite;
   filter: drop-shadow(0 24px 55px rgba(139, 26, 26, 0.2));
   position: relative;
   z-index: 2;
@@ -1078,7 +1077,7 @@ ul {
 
 .center-img-ring {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   border-radius: 50%;
   border: 1px solid var(--border-maroon);
@@ -1231,13 +1230,13 @@ ul {
 /* STATS BAR */
 .stats-bar {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   background: var(--bg-card);
   border: 1px solid var(--border-mid);
   border-radius: var(--radius-xl);
   padding: 22px 40px;
-  margin-top: 64px;
+  margin-top: 0px;
   box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
@@ -1521,7 +1520,7 @@ ul {
 ============================================ */
 .intro {
   background: var(--bg-soft);
-  padding: 100px 0;
+  padding: 50px 0 0px 0;
 }
 
 .intro__grid {
